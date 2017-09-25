@@ -175,4 +175,10 @@ button::before {
   .m-3 {
     width: 100%;
   }
+
+  footer{
+    position: relative;
+    bottom: auto;
+    left: auto;
+  }
 }
