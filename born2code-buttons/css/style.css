@@ -154,9 +154,17 @@ button::before {
 }
 
 .button1:hover::before,
+.button1:focus::before,
+.button2:active::before,
 .button2:hover::before,
+.button2:focus::before,
+.button2:active::before,
 .button3:hover::before,
-.button4:hover::before {
+.button3:focus::before,
+.button3:active::before,
+.button4:hover::before,
+.button4:focus::before,
+.button4:active::before {
   width: 200%;
   height: 200%;
 }
