@@ -1,0 +1,178 @@
+:root {
+  font-size: 18px;
+  --lightblue: #09f;
+  --red: #f00;
+  --black: #000;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+nav,
+main,
+header,
+section,
+footer {
+  display: block;
+}
+
+header,
+main,
+footer {
+  position: relative;
+  width: 100%;
+  padding: 1.1rem;
+  text-align: center;
+}
+
+header {
+  background: var(--black);
+}
+
+section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.1rem;
+  background: var(--lightblue);
+  color: var(--white);
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--lightblue);
+}
+
+.m-3 {
+  width: 25%;
+  padding: 1rem;
+}
+
+.m-3:nth-child(even) {
+  background: var(--lightblue);
+}
+
+button {
+  display: inline-block;
+  margin: 0;
+  padding: 0.8rem;
+  background: transparent;
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+button::before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  z-index: -1;
+  content: '';
+  transition: all 0.5s ease;
+}
+
+.button1 {
+  border-color: var(--lightblue);
+}
+
+.button1::before {
+  bottom: -50%;
+  left: -50%;
+  background: var(--lightblue);
+}
+
+.button2 {
+  border-color: var(--red);
+  color: var(--white);
+}
+
+.button2::before {
+  bottom: -50%;
+  right: -50%;
+  background: var(--red);
+}
+
+.button3 {
+  border-color: var(--black);
+}
+
+.button3:hover {
+  color: var(--white);
+}
+
+.button3::before {
+  top: -50%;
+  left: -50%;
+  background: var(--black);
+}
+
+.button4 {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.button4:hover {
+  color: var(--black);
+}
+
+.button4::before {
+  top: -50%;
+  right: -50%;
+  background: var(--white);
+}
+
+.button1:hover::before,
+.button2:hover::before,
+.button3:hover::before,
+.button4:hover::before {
+  width: 200%;
+  height: 200%;
+}
+
+@media screen and (max-width: 768px) {
+  .m-3 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .m-3 {
+    width: 100%;
+  }
+}
