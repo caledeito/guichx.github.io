@@ -73,7 +73,8 @@ h1 {
   padding: 1rem;
 }
 
-.m-3:nth-child(even) {
+.even .m-3:nth-child(even),
+.odd .m-3:nth-child(odd) {
   background: var(--lightblue);
 }
 
@@ -93,7 +94,7 @@ button {
   transition: all 0.4s ease;
 }
 
-button::before {
+.even .m-3 button::before {
   position: absolute;
   width: 0;
   height: 0;
@@ -103,7 +104,26 @@ button::before {
   transition: all 0.5s ease;
 }
 
-.button1 {
+.odd .m-3 button::before,
+.odd .m-3 button::after {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 50%;
+  content: '';
+  transition: all 0.5s ease;
+}
+
+.odd .m-3 .button7::before,
+.odd .m-3 .button7::after,
+.odd .m-3 .button8::before,
+.odd .m-3 .button8::after {
+  width: 50%;
+  height: 100%;
+}
+
+.button1,
+.button6 {
   border-color: var(--lightblue);
 }
 
@@ -113,7 +133,8 @@ button::before {
   background: var(--lightblue);
 }
 
-.button2 {
+.button2,
+.button5 {
   border-color: var(--red);
   color: var(--white);
 }
@@ -124,7 +145,8 @@ button::before {
   background: var(--red);
 }
 
-.button3 {
+.button3,
+.button8 {
   border-color: var(--black);
 }
 
@@ -138,7 +160,8 @@ button::before {
   background: var(--black);
 }
 
-.button4 {
+.button4,
+.button7 {
   border-color: var(--white);
   color: var(--white);
 }
@@ -155,7 +178,7 @@ button::before {
 
 .button1:hover::before,
 .button1:focus::before,
-.button2:active::before,
+.button1:active::before,
 .button2:hover::before,
 .button2:focus::before,
 .button2:active::before,
@@ -165,8 +188,96 @@ button::before {
 .button4:hover::before,
 .button4:focus::before,
 .button4:active::before {
-  width: 200%;
-  height: 200%;
+  width: 200% !important;
+  height: 200% !important;
+}
+
+.button5::before,
+.button6::before {
+  top: 0;
+  left: -110%;
+}
+
+.button5::after,
+.button6::after {
+  bottom: 0;
+  right: -110%;
+}
+
+.button5::before,
+.button5::after {
+  background: var(--red);
+}
+
+.button6::before,
+.button6::after {
+  background: var(--lightblue);
+}
+
+.button5:hover::before,
+.button5:focus::before,
+.button5:active::before,
+.button6:hover::before,
+.button6:focus::before,
+.button6:active::before {
+  left: 0 !important;
+}
+
+.button5:hover::after,
+.button5:focus::after,
+.button5:active::after,
+.button6:hover::after,
+.button6:focus::after,
+.button6:active::after {
+  right: 0 !important;
+}
+
+.button7:hover {
+  color: var(--black);
+}
+
+.button8:hover {
+  color: var(--white);
+}
+
+.button7::before,
+.button8::before {
+  top: -110%;
+  left: 0;
+}
+
+.button7::after,
+.button8::after {
+  bottom: -110%;
+  right: 0;
+}
+
+.button7::before,
+.button7::after {
+  background: var(--white);
+}
+
+.button8::before,
+.button8::after {
+  background: var(--black);
+}
+
+.button7:hover::before,
+.button7:focus::before,
+.button7:active::before,
+.button8:hover::before,
+.button8:focus::before,
+.button8:active::before {
+  top: 0 !important;
+}
+
+.button7:hover::after,
+.button7:focus::after,
+.button7:active::after,
+.button8:hover::after,
+.button8:focus::after,
+.button8:active::after {
+  bottom: 0 !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -184,7 +295,7 @@ button::before {
     width: 100%;
   }
 
-  footer{
+  footer {
     position: relative;
     bottom: auto;
     left: auto;
