@@ -288,6 +288,64 @@ button {
   bottom: 0 !important;
 }
 
+.button9{
+  border-color: #09f;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.button9:hover{
+  background-color: #09f;
+}
+
+.button10{
+  border-color: red;
+  color: white;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.button10:hover{
+  background-color: red;
+}
+
+.button11{
+  border-color: black;
+  transition-property: background-color color;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.button11:hover{
+  background-color: black;
+  color: white;
+}
+
+.button12{
+  border-color: white;
+  color: white;
+  transition-property: background-color color;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.button12:hover{
+  background-color: white;
+  color: black;
+}
+
+footer{
+  position: relative;
+  bottom: auto;
+  left: auto;
+}
+
 @media screen and (max-width: 768px) {
   .m-3 {
     width: 50%;
